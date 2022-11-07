@@ -7,7 +7,7 @@
 export default {
   name: 'IndexPage',
   mounted() {
-      this.$router.push('/dashboards')
+      this.$router.push('/dashboards/main')
     },
 }
 </script>

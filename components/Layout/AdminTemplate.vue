@@ -1,5 +1,5 @@
 <template>
-    <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl   footer-offset">
+    <div>
         <Header/>
         <Sidebar/>
         <main id="content" role="main" class="main">
@@ -11,7 +11,7 @@
             </div>
             <Footer/>
         </main>
-    </body>
+    </div>
 </template>
 <script>
 import Header from './Header.vue';
@@ -19,6 +19,12 @@ import Sidebar from './Sidebar.vue';
 import Footer from './Footer.vue';
  export default {
     name: "Layout",
-    components: { Footer,Header,Sidebar }
+    components: { Footer,Header,Sidebar },
+    mounted() {
+        let user = localStorage.getItem('userAuth')
+        if(user == null){
+            this.$router.push('/auth/login')
+        }
+    },
  }
 </script>

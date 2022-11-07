@@ -9,12 +9,12 @@
   
   <script>
   
-  import AdminTemplate from '../../components/Layout/AdminTemplate.vue';
+  import AdminTemplate from '../../../components/Layout/AdminTemplate.vue';
   export default {
-      name: "Dashboard",
+      name: "Usuarios",
       head() {
           return {
-              title: "Dashboard"
+              title: "Usuarios"
           };
       },
       components: { AdminTemplate },
